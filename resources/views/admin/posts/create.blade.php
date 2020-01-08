@@ -7,7 +7,7 @@
         Create a new post
     </div>
     <div class="card-body">
-        <form action="http://localhost/blog/public/post/store" method="post">
+        <form action="{{ route('post.store') }}" method="post">
             @csrf
             <div class="form-group">
                 <label for="title">Title</label>
