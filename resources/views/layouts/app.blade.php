@@ -79,7 +79,7 @@
                     <div class="col-lg-4">
                         <div class="list-group">
                             <div class="list-group-item">
-                                <a href="http://localhost/blog/public/home">Home</a>
+                                <a href="{{ route('home') }}">Home</a>
                             </div>
                             <div class="list-group-item">
                                 <a href="{{ route('post.create') }}">Create new post</a>
