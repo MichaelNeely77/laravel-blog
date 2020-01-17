@@ -10,6 +10,8 @@ use App\Post;
 
 use App\Category;
 
+use Str;
+
 class PostsController extends Controller
 {
     /**
@@ -29,7 +31,17 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('admin.posts.create')->with('categories', Category::all());
+
+        $categories = Category::all();
+
+        if($categories->count() == 0)
+        {
+            Session::flash('info', 'Ypu must have some categories before creating a post');
+
+            return redirect()->back();
+        }
+
+        return view('admin.posts.create')->with('categories', $categories);
     }
 
     /**
@@ -58,12 +70,14 @@ class PostsController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'featured' => 'uploads/posts' . $featured_new_name,
-            'category_id' => $request->category_id
+            'category_id' => $request->category_id,
+            'slug' => Str::slug($request->title)
         ]);
 
         Session::flash('success', 'Post created successfully');
 
-        dd($request->all());
+        return redirect()->back();
+
     }
 
     /**
