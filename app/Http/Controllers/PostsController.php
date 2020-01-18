@@ -21,7 +21,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.posts.index')->with('posts', Post::all());
     }
 
     /**
@@ -36,7 +36,7 @@ class PostsController extends Controller
 
         if($categories->count() == 0)
         {
-            Session::flash('info', 'Ypu must have some categories before creating a post');
+            Session::flash('info', 'You must have some categories before creating a post');
 
             return redirect()->back();
         }

@@ -13,16 +13,17 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
 
+
     <script>
-    @if(Session::has('success'))
-        toastr.success("{{ Session::get('success') }}")
+    // @if(Session::has('success'))
+    //     toastr.success("{{ Session::get('success') }}")
 
-    @endif
+    // @endif
 
-    @if(Session::has('success'))
-        toastr.success("{{ Session::get('info') }}")
+    // @if(Session::has('success'))
+    //     toastr.success("{{ Session::get('info') }}")
 
-    @endif
+    // @endif
     
     </script>
 
@@ -102,6 +103,9 @@
                                 <a href="{{ route('categories') }}">Categories</a>
                             </div>
                             <div class="list-group-item">
+                                <a href="{{ route('posts') }}">All Posts</a>
+                            </div>
+                            <div class="list-group-item">                          
                                 <a href="{{ route('category.create') }}">Create New Category</a>
                             </div>
                             <div class="list-group-item">
