@@ -25,8 +25,9 @@
                     <td><img src="{{ $post->featured }}" alt="{{$post->title}}" width="50" height="50"></td>
                         <td>{{ $post->title }}</td>
                         <td>Edit</td>
-                        <td>Delete</td>
-                    </tr>
+                        <td>
+                            <a href="{{ route('post.delete', ['id' => $post->id]) }}" class="btn btn-danger">Trash</a>
+                        </td></tr>
                     
                 @endforeach
             </tbody>
