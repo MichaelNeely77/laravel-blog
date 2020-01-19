@@ -16,7 +16,10 @@
                     Edit
                 </th>
                 <th>
-                    Trash
+                    Restore
+                </th>
+                <th style="text-align: center;">
+                    Delete Permanently
                 </th>
             </thead>
             <tbody>
@@ -26,8 +29,12 @@
                         <td>{{ $post->title }}</td>
                         <td>Edit</td>
                         <td>
-                            <a href="{{ route('post.delete', ['id' => $post->id]) }}" class="btn btn-danger">Trash</a>
-                        </td></tr>
+                            <a href="{{ route('post.delete', ['id' => $post->id]) }}" class="btn btn-sm btn-info" style="color: white;">Restore</a>
+                        </td>
+                        <td>
+                            <a href="{{ route('post.delete', ['id' => $post->id]) }}" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
                     
                 @endforeach
             </tbody>
