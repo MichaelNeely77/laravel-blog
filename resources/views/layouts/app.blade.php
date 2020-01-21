@@ -103,6 +103,12 @@
                                 <a href="{{ route('categories') }}">Categories</a>
                             </div>
                             <div class="list-group-item">
+                                <a href="{{ route('tags') }}">Tags</a>
+                            </div>
+                            <div class="list-group-item">
+                                <a href="{{ route('tag.create') }}">Create a Tag</a>
+                            </div>
+                            <div class="list-group-item">
                                 <a href="{{ route('posts') }}">All Posts</a>
                             </div>
                             <div class="list-group-item">
