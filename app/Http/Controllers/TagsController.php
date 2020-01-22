@@ -59,7 +59,7 @@ class TagsController extends Controller
      */
     public function show($id)
     {
-        //
+        // Let's see what happens
     }
 
     /**
