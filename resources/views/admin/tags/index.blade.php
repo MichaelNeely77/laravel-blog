@@ -28,12 +28,10 @@
                     </td>
                     <td>
                         <a href="{{ route('tag.edit', ['id' => $tag->id]) }}" class="btn btn-info btn-xs">Edit
-                        <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                     </td>
                     <td>
                         <a href="{{ route('tag.delete', ['id' => $tag->id]) }}" class="btn btn-danger btn-xs">Delete
-                        <span class="glyphicon glyphicon-trash"></span>
                     </a>
                     </td>
                 </tr>
