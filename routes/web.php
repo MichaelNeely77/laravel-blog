@@ -132,6 +132,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
             'as' => 'tag.delete'
         ]);
 
+        Route::get('/users', [
+            'uses' => 'UsersController@index',
+            'as' => 'users'
+        ]);
+
         
 });
 
