@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Users;
+use App\User;
+
+use App\Profile;
+
+use Session;
 
 use Illuminate\Http\Request;
 
-class UsersContoller extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +19,7 @@ class UsersContoller extends Controller
      */
     public function index()
     {
-        return view()->with('users', User::all());
+        return view('admin.users.index')->with('users', User::all());
     }
 
     /**
@@ -25,7 +29,7 @@ class UsersContoller extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -36,7 +40,24 @@ class UsersContoller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email'
+        ]);
+
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt('password')
+        ]);
+
+        $profile = Profile::create([
+            'user_id' => $user->id
+        ]);
+
+        Session::flash('success', 'User added successfullly');
+
+        return redirect()->route('users');
     }
 
     /**

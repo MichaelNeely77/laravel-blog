@@ -23,7 +23,7 @@
                 </th>
             </thead>
             <tbody>
-                @if ($userss->count() > 0)
+                @if ($users->count() > 0)
                     @foreach ($users as $user)
                         <tr>
                             <td>
