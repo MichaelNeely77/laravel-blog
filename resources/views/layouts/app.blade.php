@@ -105,12 +105,18 @@
                             <div class="list-group-item">
                                 <a href="{{ route('tags') }}">Tags</a>
                             </div>
-                            <div class="list-group-item">
-                                <a href="{{ route('users') }}">Users</a>
-                            </div>
-                            <div class="list-group-item">
-                                <a href="{{ route('user.create') }}">New Users</a>
-                            </div>
+                            @if (Auth::user()->admin)
+                            {
+                                <div class="list-group-item">
+                                    <a href="{{ route('users') }}">Users</a>
+                                </div>
+                                <div class="list-group-item">
+                                    <a href="{{ route('user.create') }}">New Users</a>
+                                </div>
+                            }
+                                
+                            @endif
+
                             <div class="list-group-item">
                                 <a href="{{ route('tag.create') }}">Create a Tag</a>
                             </div>
