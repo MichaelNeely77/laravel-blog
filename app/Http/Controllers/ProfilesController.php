@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
 class ProfilesController extends Controller
 {
     /**
@@ -13,7 +15,7 @@ class ProfilesController extends Controller
      */
     public function index()
     {
-        return view('admin.user.profile')->('user', Auth::user());
+        return view('admin.user.profile')->with('user', Auth::user());
     }
 
     /**
