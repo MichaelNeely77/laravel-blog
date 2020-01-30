@@ -15,7 +15,7 @@ class ProfilesController extends Controller
      */
     public function index()
     {
-        return view('admin.user.profile')->with('user', Auth::user());
+        return view('admin.users.profile')->with('user', Auth::user());
     }
 
     /**
@@ -68,9 +68,9 @@ class ProfilesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        
     }
 
     /**
