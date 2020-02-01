@@ -1,6 +1,8 @@
 @extends('layouts.app');
 
 @section('content')
+{{-- @section('styles')
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.css" rel="stylesheet"> --}}
 
 @include('admin.includes.errors')
 
@@ -38,7 +40,7 @@
             </div>
             <div class="form-group">
                 <label for="content">Content</label>
-                <textarea name="content" id="" cols="5" rows="10" class="form-control"></textarea>
+                <textarea name="content" id="summernote" cols="5" rows="10" class="form-control"></textarea>
             </div>
             <div class="form-group">
                 <div class="text-center">
@@ -48,6 +50,17 @@
         </form>
     </div>
 </div>
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+
+</script>
+
+@endsection
 
     
 @endsection
