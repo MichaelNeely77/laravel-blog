@@ -36,6 +36,8 @@ class PostsController extends Controller
 
         $categories = Category::all();
 
+        $tags = Tag::all();
+
         if($categories->count() == 0)
         {
             Session::flash('info', 'You must have some categories before creating a post');
