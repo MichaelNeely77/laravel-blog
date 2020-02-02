@@ -11,20 +11,20 @@
 
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/toastr.min.js') }}"></script>
 
 
     <script>
-    // @if(Session::has('success'))
-    //     toastr.success("{{ Session::get('success') }}")
+    @if(Session::has('success'))
+        toastr.success("{{ Session::get('success') }}")
 
-    // @endif
+    @endif
 
-    // @if(Session::has('success'))
-    //     toastr.success("{{ Session::get('info') }}")
+    @if(Session::has('info'))
+        toastr.success("{{ Session::get('info') }}")
 
-    // @endif
+    @endif
     
     </script>
 
@@ -154,8 +154,8 @@
 
         </main>
     </div>
-   @yield('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
+    @yield('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
 
 </body>
 </html>
