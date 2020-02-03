@@ -138,6 +138,9 @@
                             <div class="list-group-item">
                                 <a href="{{ route('post.create') }}">Create new post</a>
                             </div>
+                            <div class="list-group-item">
+                                <a href="{{ route('settings') }}">Settings</a>
+                            </div>
                         </div>
 
                     </div>
