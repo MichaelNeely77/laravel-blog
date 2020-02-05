@@ -5,7 +5,7 @@
 
 <div class="card card-default">
     <div class="card-header">
-        Create a new post
+        Create a New Category
     </div>
     <div class="card-body">
         <form action="{{ route('category.store') }}" method="post">

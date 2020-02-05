@@ -81,6 +81,8 @@ class PostsController extends Controller
 
         $post->tags()->attach($request->tags);
 
+        $post->save();
+
         Session::flash('success', 'Post created successfully');
 
         return redirect()->back();
