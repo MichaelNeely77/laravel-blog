@@ -5,7 +5,7 @@
 
 <div class="card card-default">
     <div class="card-header">
-        Edit Blog SEttings
+        Edit Blog Settings
     </div>
     <div class="card-body">
         <form action="{{ route('settings.update') }}" method="post">
