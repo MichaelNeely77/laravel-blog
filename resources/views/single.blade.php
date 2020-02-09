@@ -45,7 +45,7 @@
 
                             <span class="category">
                                 <i class="seoicon-tags"></i>
-                                <a href="#">{{ $post->category->name }}</a>
+                                <a href="{{ route('category.single', ['id' => $post->category->id ]) }}">{{ $post->category->name }}</a>
 
                             </span>
 
@@ -192,8 +192,9 @@
                         </aside>
                     </div>
 
-                </div>
+            <!-- End Sidebar-->
 
-
-            </div>
+        </main>
+    </div>
+</div>
 @endsection
