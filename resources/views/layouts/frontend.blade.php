@@ -44,7 +44,7 @@
     
     @include("includes.header")
 
-    <div class="header-spacer"></div>
+    @yield('content')
 
     <div class="container">
 
