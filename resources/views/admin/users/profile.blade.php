@@ -33,7 +33,7 @@
             </div>
             <div class="form-group">
                 <label for="email">YouTube Profile</label>
-            <input type="text" name="youtube" value="{{$user->profile->youtube }}" class="form-control">
+            <input type="text" name="youtube" value="{{ $user->profile->youtube }}" class="form-control">
             </div>
             <div class="form-group">
                 <label for="about">About You</label>

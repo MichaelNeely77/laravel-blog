@@ -26,7 +26,7 @@
             </div>
 
             <div class="form-group">
-                <label for="contact_email">Contact Emai8l</label>
+                <label for="contact_email">Contact Email</label>
                 <input type="email" name="contact_email" class="form-control" value="{{ $settings->contact_email}} ">
             </div>
 
