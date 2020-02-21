@@ -53,7 +53,7 @@
                 <article class="hentry post post-standard has-post-thumbnail sticky">
 
                         <div class="post-thumb">
-                            <img src="{{ $first_post->featured }}" alt="seo">
+                            <img src="{{ $first_post->featured }}" alt="{{ $first_post->title}}">
                             <div class="overlay"></div>
                             <a href="{{ $first_post->featured }}" class="link-image js-zoom-image">
                                 <i class="seoicon-zoom"></i>

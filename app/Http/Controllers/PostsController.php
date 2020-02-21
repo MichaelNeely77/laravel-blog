@@ -47,7 +47,9 @@ class PostsController extends Controller
             return redirect()->back();
         }
 
-        return view('admin.posts.create')->with('categories', $categories)->with('tags', Tag::all());
+        return view('admin.posts.create')
+                ->with('categories', $categories)
+                ->with('tags', Tag::all());
     }
 
     /**
