@@ -163,7 +163,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
             'as' => 'users'
         ]);
 
-        Route::get('/users/create', [
+        Route::get('/user/create', [
             'uses' => 'UsersController@create',
             'as' => 'user.create'
         ]);

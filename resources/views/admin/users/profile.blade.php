@@ -17,7 +17,7 @@
 
             <div class="form-group">
                 <label for="email">User Email</label>
-                <input type="email" name="email" value="{{$user->email}}" class="form-control">
+                <input type="email" name="email" value="{{ $user->email }}" class="form-control">
             </div>
             <div class="form-group">
                 <label for="email">New Password</label>
@@ -29,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Facebook Profile</label>
-                <input type="text" name="facebook" value="{{ $user->profile->facebook }}" class="form-control">
+                <input type="text" name="facebook" value="{{$profile->facebook}}" class="form-control">
             </div>
             <div class="form-group">
                 <label for="email">YouTube Profile</label>
