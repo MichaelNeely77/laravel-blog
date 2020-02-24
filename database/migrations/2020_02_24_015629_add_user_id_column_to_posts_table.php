@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RemoveUserIdColumnFromPostsTable extends Migration
+class AddUserIdColumnToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class RemoveUserIdColumnFromPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('user_id');
+            $table->integer('user_id')->after('id');
         });
     }
 
@@ -26,7 +26,7 @@ class RemoveUserIdColumnFromPostsTable extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->integer('user_id');
+            $table->dropColumn('user_id');
         });
     }
 }
