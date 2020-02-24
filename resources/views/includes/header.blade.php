@@ -3,7 +3,7 @@
             <div class="header-content-wrapper">
                 <div class="logo">
                     <div class="logo-text">
-                        <div class="logo-title">{{ $title }}</div>
+                        <a href="#"><div class="logo-title">{{ $settings->site_name }}</div></a>
                     </div>
                 </div>
 
@@ -20,7 +20,7 @@
                     <ul class="primary-menu-menu" style="overflow: hidden;">
                         @foreach ($categories as $category)
                         <li>
-                            <a href="">{{ $category->name }}</a>
+                        <a href="#">{{ $category->name }}</a>
                         </li>
                         @endforeach
                    

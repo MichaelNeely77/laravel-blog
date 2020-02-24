@@ -99,6 +99,7 @@ class ProfilesController extends Controller
         $user->profile->facebook = $request->facebook;
         $user->profile->youtube = $request->youtube;
         $user->profile->avatar = $request->avatar;
+        $user->profile->about = $request->about;
 
         $user->save();
 
