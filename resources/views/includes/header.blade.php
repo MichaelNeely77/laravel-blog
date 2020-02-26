@@ -3,7 +3,7 @@
             <div class="header-content-wrapper">
                 <div class="logo">
                     <div class="logo-text">
-                        <a href="#"><div class="logo-title">{{ $settings->site_name }}</div></a>
+                        <a href="/"><div class="logo-title">{{ $settings->site_name }}</div></a>
                     </div>
                 </div>
 
